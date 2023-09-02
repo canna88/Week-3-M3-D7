@@ -33,7 +33,7 @@ body {
   transform: scale(1.2);
   z-index: 1;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9); /* Ombra più scura */
-  transition: all 0.5s ease-in-out 0.3s;
+  transition: all 0.3s ease-in-out 0.3s;
   cursor: pointer;
 }
 
@@ -44,7 +44,7 @@ body {
   transform: scale(1.2);
   z-index: 1;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9); /* Ombra più scura */
-  transition: all 0.5s ease-in-out 0.3s;
+  transition: all 0.3s ease-in-out 0.3s;
   cursor: pointer;
   left: 10%;
 }
@@ -56,7 +56,7 @@ body {
   transform: scale(1.2);
   z-index: 1;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9); /* Ombra più scura */
-  transition: all 0.5s ease-in-out 0.3s;
+  transition: all 0.3s ease-in-out 0.3s;
   cursor: pointer;
   left: -10%;
 }
@@ -73,7 +73,7 @@ body {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9); /* Ombra più scura */
 }
 .card:hover .card-body {
-  transition: all 0.5s ease-in-out 0.3s;
+  transition: all 0.3s ease-in-out 0.3s;
   top: 100%;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -324,8 +324,8 @@ body {
     left 1s ease-in-out 1s, right 1s ease-in-out 1s;
   right: 0;
   font-size: 14px;
-  left: 155%;
-  opacity: 1;
+  left: calc(101% + 82px); 
+    opacity: 1;
 }
 
 /* NAVBAR */
@@ -333,6 +333,10 @@ body {
 #navbar {
   background-color: rgb(255, 4, 4);
   height: 50px;
+}
+
+.navbar.fixed-top.navbar-expand-lg.navbar-light {
+  padding-right: 30px;
 }
 
 .navbar {
@@ -450,7 +454,6 @@ body {
 }
 
 .dropdown button {
-  margin-left: 10px;
   border: none;
   background-color: rgb(24, 24, 24);
   padding: 0;
@@ -521,6 +524,7 @@ body {
 }
 
 .navbar-toggler .bi.bi-list:hover {
+  transition: all 0.2s ease;
   font-size: 42px;
 }
 
@@ -751,6 +755,12 @@ body {
   .messagge-arrow {
     font-size: 16px;
   }
+
+  .carousel-title-div:hover .messagge-arrow {
+
+    left: calc(101% + 73px); 
+  }
+
   #footer ul li {
     text-align: center;
   }
@@ -771,4 +781,15 @@ body {
     justify-content: center;
     text-align: center;
   }
+
+  .navbar.fixed-top.navbar-expand-lg.navbar-light {
+    padding-right: 5px;
+  }
+}
+
+
+.lazy-loading-div {
+
+  opacity: 0; /* Nascondi i div inizialmente */
+  transition: opacity 0.5s; /* Aggiungi una transizione per un effetto di fade-in */
 }

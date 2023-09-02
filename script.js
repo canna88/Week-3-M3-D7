@@ -14,6 +14,28 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
+    const divs = document.querySelectorAll('.lazy-loading-div');
+    let lastKnownScrollPosition = 0;
+    
+    function handleScroll() {
+      lastKnownScrollPosition = window.scrollY;
+    
+      divs.forEach((div, index) => {
+        const rect = div.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom >= 0 && div.style.opacity !== '1') {
+          setTimeout(() => {
+            div.style.opacity = '1'; // Mostra gradualmente il div
+          }, 300 * index); // Ritardo tra il fade-in di ciascun div
+        }
+      });
+    }
+    
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleScroll);
+    
+    handleScroll(); // Esegui la funzione anche all'avvio della pagina
+    
+
   });
 
 
