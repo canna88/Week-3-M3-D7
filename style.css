@@ -21,7 +21,6 @@ body {
   margin: 1%;
   background-color: rgb(24, 24, 24);
   position: relative;
-  transition: all 0.3s ease;
   top: 0;
 }
 
@@ -32,6 +31,28 @@ body {
   transform: scale(1.3);
   z-index: 1;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9); /* Ombra più scura */
+  transition: all 0.5s ease-in-out 0.3s;
+
+}
+
+/* CARD BODY */
+.card-body {
+  width: 100%;
+  top: 95%;
+  height: 0%;
+  background-color: rgb(24, 24, 24);
+  position: absolute;
+  opacity: 0;
+  z-index: 0;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9); /* Ombra più scura */
+}
+.card:hover .card-body {
+  transition: all 0.5s ease-in-out 0.3s;
+  top: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: auto; /* da sostituire */
+  opacity: 1;
 }
 
 /* CARD - IMMAGINE */
@@ -53,26 +74,6 @@ body {
   overflow: hidden;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-}
-
-/* CARD BODY */
-.card-body {
-  width: 100%;
-  top: 95%;
-  height: 0%;
-  background-color: rgb(24, 24, 24);
-  position: absolute;
-  opacity: 0;
-  z-index: 0;
-  transition: all 0.5s ease-in-out;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9); /* Ombra più scura */
-}
-.card:hover .card-body {
-  top: 100%;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  height: auto; /* da sostituire */
-  opacity: 1;
 }
 
 /* CAROUSEL-BOTTONI */
@@ -218,7 +219,7 @@ body {
 .card:hover .time-2,
 .card:hover .title-movie,
 .card:hover .load-bar {
-  animation: flip-in-hor-bottom 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s
+  animation: flip-in-hor-bottom 2.0s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s
     both;
 }
 
