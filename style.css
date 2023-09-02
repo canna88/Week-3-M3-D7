@@ -1,1 +1,367 @@
-/* Stili per la pagina */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+/* Stili di base per le carte */
+
+body {
+  background-color: rgb(24, 24, 24);
+}
+
+/* CAROUSEL-INNER */
+.carousel-inner {
+  padding: 0 3em 0 3em;
+  position: relative;
+}
+
+.carousel-inner:hover {
+  overflow: visible;
+}
+
+/* CARD-GENERALE */
+.card {
+  margin: 1%;
+  background-color: rgb(24, 24, 24);
+  position: relative;
+  transition: all 0.3s ease;
+  top: 0;
+}
+
+.card:hover {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  top: -20%;
+  transform: scale(1.3);
+  z-index: 1;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9); /* Ombra più scura */
+}
+
+/* CARD - IMMAGINE */
+.img-wrapper {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.img-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.card:hover .img-wrapper img {
+  overflow: hidden;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+/* CARD BODY */
+.card-body {
+  width: 100%;
+  top: 95%;
+  height: 0%;
+  background-color: rgb(24, 24, 24);
+  position: absolute;
+  opacity: 0;
+  z-index: 0;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9); /* Ombra più scura */
+}
+.card:hover .card-body {
+  top: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: auto; /* da sostituire */
+  opacity: 1;
+}
+
+/* CAROUSEL-BOTTONI */
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 3%;
+}
+
+/* CARD-ICONS, TITOLO, BAR, */
+
+.card-icons {
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  line-height: 0;
+}
+
+.card-icons-2 {
+  display: flex;
+  gap: 5px;
+  line-height: 0;
+}
+
+.bi.bi-plus,
+.bi.bi-hand-thumbs-up,
+.bi.bi-arrow-down {
+  padding: 2px;
+  background-color: #ffffff23;
+  border: 2px solid #ffffff23;
+  border-radius: 50%;
+  color: #ddd;
+  font-size: 1.5em;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+}
+
+.bi.bi-play-fill {
+  padding: 2px;
+  background-color: #dddddd8a;
+  border: 2px solid #ffffff23;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 1.5em;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+}
+
+.bi.bi-plus:hover,
+.bi.bi-hand-thumbs-up:hover,
+.bi.bi-arrow-down:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9); /* Ombra più scura */
+  background-color: #ddd;
+  color: black;
+  cursor: pointer;
+}
+
+.bi.bi-play-fill:hover {
+  background-color: #ddd;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9); /* Ombra più scura */
+  color: black;
+  cursor: pointer;
+}
+
+.icon-content {
+  position: relative;
+}
+
+.third-line {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.time {
+  width: 30%;
+}
+
+.load-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 70%;
+  height: 3px;
+  cursor: pointer;
+}
+
+.loader-line {
+  position: relative;
+  width: 100%;
+  height: 3px;
+  overflow: hidden;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.card:hover .loader-line:before {
+  border: 0px;
+  left: 0;
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 0%;
+  background-color: rgb(255, 0, 0);
+  animation: lineAnim 20s linear infinite;
+}
+
+@keyframes lineAnim {
+  0% {
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.title-movie {
+  display: flex;
+  justify-content: left; /* Centra orizzontalmente */
+  align-items: center; /* Centra verticalmente */
+  color: white; /* Testo bianco */
+}
+
+.title-movie-2 {
+  margin-top: 12px;
+  text-align: left; /* Allinea il testo a sinistra */
+  font-size: 14px;
+}
+
+.time-2 {
+  font-size: 14px;
+  display: flex;
+  justify-content: right; /* Centra orizzontalmente */
+  align-items: center; /* Centra verticalmente */
+  color: white; /* Testo bianco */
+}
+
+.card:hover .bi.bi-plus,
+.card:hover .bi.bi-hand-thumbs-up,
+.card:hover .bi.bi-arrow-down,
+.card:hover .bi.bi-play-fill,
+.card:hover .time-2,
+.card:hover .title-movie,
+.card:hover .load-bar {
+  animation: flip-in-hor-bottom 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s
+    both;
+}
+
+@keyframes flip-in-hor-bottom {
+  0% {
+    transform: rotateX(80deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
+
+/* CAROUSEL TITLE */
+
+.carousel-title-div {
+  display: flex;
+  padding: 0 0 0 3em;
+  color: white;
+  align-items: end;
+}
+
+.carousel-title-add {
+  width: fit-content;
+  display: flex;
+  color: white;
+  position: relative;
+  display: flex;
+  align-items: end;
+}
+
+.carousel-title {
+  position: relative;
+  font-size: 25px;
+}
+
+.carousel-title-div:hover .carousel-title {
+  text-decoration: underline;
+}
+
+.carousel-title-div:hover {
+  cursor: pointer;
+}
+
+.messagge {
+  color: rgb(84, 185, 169);
+  position: absolute;
+  font-size: 20px;
+  left: 0;
+  opacity: 0;
+  white-space: nowrap;
+  
+}
+
+.carousel-title-div:hover .messagge {
+  transition: opacity 1s ease-in-out 1s,
+    left 1s ease-in-out 1s, right 1s ease-in-out 1s,transition-duration 0s;
+  right: 0;
+  left: 105%;
+  opacity: 1;
+}
+
+.messagge-arrow {
+  color: rgb(84, 185, 169);
+  position: absolute;
+  font-size: 30px;
+  font-weight: 800;
+
+  opacity: 0;
+  white-space: nowrap;
+  left: 101%;
+}
+
+.carousel-title-div:hover .messagge-arrow {
+  transition: font-size 1s ease-in-out 1s, 
+  opacity 1s ease-in-out,
+    left 1s ease-in-out 1s, 
+    right 1s ease-in-out 1s;
+  right: 0;
+  font-size: 20px;
+  left: 155%;
+  opacity: 1;
+}
+
+@media screen and (max-width: 576px) {
+  .card:hover {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    top: -20%;
+    transform: scale(1.1);
+    z-index: 1;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9); /* Ombra più scura */
+  }
+
+  .card:hover .card-body {
+    top: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    opacity: 1;
+  }
+
+  .bi.bi-plus,
+  .bi.bi-hand-thumbs-up,
+  .bi.bi-arrow-down {
+    padding: 5px;
+    border: 3px solid #ffffff23;
+    font-size: 2em;
+  }
+
+  .bi.bi-play-fill {
+    padding: 5px;
+    border: 3px solid #ffffff23;
+    font-size: 2em;
+    z-index: 1;
+  }
+
+  .loader-line {
+    height: 5px;
+  }
+
+  .title-movie-2 {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+  .time-2 {
+    font-size: 15px;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 10%;
+  }
+  .carousel-title {
+    font-size: 18px;
+  }
+
+  .messagge {
+    font-size: 15px;
+  }
+
+  .messagge-arrow {
+    font-size: 20px;
+  }
+}
