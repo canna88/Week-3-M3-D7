@@ -132,7 +132,7 @@ body {
   border: 2px solid #ffffff23;
   border-radius: 50%;
   color: #ddd;
-  font-size: 1.0em;
+  font-size: 1em;
   z-index: 1;
   transition: all 0.5s ease-in-out;
 }
@@ -143,7 +143,7 @@ body {
   border: 2px solid #ffffff23;
   border-radius: 50%;
   color: #ffffff;
-  font-size: 1.0em;
+  font-size: 1em;
   z-index: 1;
   transition: all 0.5s ease-in-out;
 }
@@ -328,14 +328,11 @@ body {
   opacity: 1;
 }
 
-
-
 /* NAVBAR */
 
 #navbar {
   background-color: rgb(255, 4, 4);
   height: 50px;
-
 }
 
 .navbar {
@@ -503,36 +500,53 @@ body {
 }
 
 .navbar-toggler {
-  background-color: rgba(255, 255, 255, 0.39); /* Sfondo nero trasparente */
-  border: 2px solid white; /* Bordo bianco */
-  color: white; /* Testo bianco */
-  border-radius: 3px; /* Angoli non smussati */
+  padding: 0;
+  line-height: 0;
+  margin-right: 10px;
+  width: 48px;
+  height: 48px;
+  background-color: rgb(24, 24, 24);
+  border: 2px solid white;
+  border-radius: 3px;
 }
 
-#footer .row{
-padding: 0 5% 0 5%;
-display: flex;
-justify-content:space-between
+.navbar-toggler .bi.bi-list {
+  border: 1px solid white;
+  border-radius: 3px;
+  color: white;
+  line-height: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 34px;
 }
 
-#footer .row.loghi{
-padding: 0 5% 0 5%;
-display: flex;
-justify-content:space-between
-
+.navbar-toggler .bi.bi-list:hover {
+  font-size: 42px;
 }
 
-#footer ul{
-  padding: 0 ;
+#footer .row {
+  padding: 0 5% 0 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#footer .row.loghi {
+  padding: 0 5% 0 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#footer ul {
+  padding: 0;
   list-style: none; /* Rimuove i puntini */
   font-size: 12px;
   font-weight: bold;
   transition: all 0.2s ease-in-out;
 }
 
-#footer ul li{
+#footer ul li {
   overflow: visible;
-  margin-bottom: 10px ;
+  margin-bottom: 10px;
   list-style: none; /* Rimuove i puntini */
   font-size: 12px;
   font-weight: bold;
@@ -542,29 +556,37 @@ justify-content:space-between
 #footer ul li:hover {
   text-decoration: underline;
   cursor: pointer;
-  color: rgb(228, 228, 228); /* Cambia il colore del testo quando passi il mouse sopra */
+  color: rgb(
+    228,
+    228,
+    228
+  ); /* Cambia il colore del testo quando passi il mouse sopra */
 }
 
-.row.footer-icons{
+.row.footer-icons {
   width: 100%;
   display: flex;
   margin: 0;
   padding: 0;
 }
 
-.row.footer-icons i{
+.row.footer-icons i {
   padding-top: 5px;
- margin-right: 10px;
- font-size: 20px;
- transition: all 0.2s ease-in-out;
+  margin-right: 10px;
+  font-size: 20px;
+  transition: all 0.2s ease-in-out;
 }
 
-.row.footer-icons i:hover{
-cursor: pointer;
-color: rgb(228, 228, 228); /* Cambia il colore del testo quando passi il mouse sopra */
+.row.footer-icons i:hover {
+  cursor: pointer;
+  color: rgb(
+    228,
+    228,
+    228
+  ); /* Cambia il colore del testo quando passi il mouse sopra */
 }
 
-.row.footer-data{
+.row.footer-data {
   width: fit-content;
   display: flex;
   flex-direction: column;
@@ -572,7 +594,7 @@ color: rgb(228, 228, 228); /* Cambia il colore del testo quando passi il mouse s
   padding: 0;
 }
 
-.row.footer-data div{
+.row.footer-data div {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -580,28 +602,90 @@ color: rgb(228, 228, 228); /* Cambia il colore del testo quando passi il mouse s
   margin-bottom: 10px;
 }
 
-
 .footer-data-div {
   display: flex;
   justify-content: center;
-  padding: 5px;
+  padding: 10px;
   width: fit-content;
   border: 1px solid #6c757d;
   display: flex;
   margin: 0;
   font-size: 14px;
   transition: all 0.2s ease-in-out;
+  line-height: 0;
 }
 
-.footer-data-div:hover{
+.footer-data-div:hover {
   cursor: pointer;
-  color: rgb(228, 228, 228); /* Cambia il colore del testo quando passi il mouse sopra */
-  }
+  color: rgb(
+    228,
+    228,
+    228
+  ); /* Cambia il colore del testo quando passi il mouse sopra */
+}
 
 .footer-data div span {
   font-size: 10px;
 }
 
+.splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  z-index: 100;
+  animation: fade-in-2 2s ease-in-out 6s forwards, resize 0.5s 8s forwards;
+}
+
+.splash img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 200;
+  width: 70%;
+  animation: go-away 6s ease-in-out 0s forwards;
+}
+
+@keyframes go-away {
+  0% {
+    opacity: 0;
+    width: 70%;
+  }
+  50% {
+    opacity: 1;
+    width: 70%;
+  }
+  100% {
+    opacity: 1;
+    width: 0;
+  }
+}
+
+@keyframes fade-in-2 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* per eliminare il div di fondo */
+@keyframes resize {
+  0% {
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    width: 1px;
+    height: 1px;
+  }
+}
 
 @media screen and (max-width: 576px) {
   .card:hover,
@@ -667,25 +751,24 @@ color: rgb(228, 228, 228); /* Cambia il colore del testo quando passi il mouse s
   .messagge-arrow {
     font-size: 16px;
   }
-  #footer ul li{
+  #footer ul li {
     text-align: center;
   }
 
-#footer .row{
-
-  justify-content:center;
+  #footer .row {
+    justify-content: center;
   }
 
-  .row.footer-icons{
+  .row.footer-icons {
     text-align: center;
   }
-  .row.footer-data div{
+  .row.footer-data div {
     align-items: center;
   }
-  .row.footer-data{
-width: 100%;
-align-items: center;
-justify-content: center;
+  .row.footer-data {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
     text-align: center;
   }
 }

@@ -12,7 +12,12 @@ document.addEventListener('DOMContentLoaded', function () {
     searchInput.addEventListener('blur', function () {
       searchInput.classList.remove('active');
     });
+
+
   });
+
+
+  
   
 
 
