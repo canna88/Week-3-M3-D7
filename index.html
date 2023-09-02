@@ -14,7 +14,381 @@
 </head>
 
 <body>
-    <h1>Hello, world!</h1>
+
+    <section id="navbar">
+
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+
+
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="assets\imgs\Netflix_Logo_RGB.png" width="120px" alt="">
+                </a>
+
+                <div class="mobile">
+                    <div class="update-bell d-lg-none">
+                        <i class="bi bi-bell"></i>
+                    </div>
+                    <div class="dropdown d-lg-none" onmouseover="toggleDropdown(this)">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="image-container">
+                                <img src="assets\imgs\avatar-1.jpg" alt="">
+                            </div>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton2">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-person-fill"></i> Gestisci profili</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-arrow-right-square-fill"></i>
+                                    Trasferisci
+                                    profilo</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-gear-fill"></i> Account</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-question-circle-fill"></i> Centro
+                                    assistenza</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-left"
+                                        style="opacity: 0;"></i> Esci
+                                    da Netflix</a></li>
+                        </ul>
+
+                    </div>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+
+                    <ul class="navbar-nav mr-auto">
+
+                        <li class="nav-item ">
+                            <a class="nav-link home font-weight-bold  " href="#" role="button" data-toggle="dropdown"
+                                aria-expanded="false">
+                                Home
+                            </a>
+
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link font-weight-bold" href="#" role="button" data-toggle="dropdown"
+                                aria-expanded="false">
+                                Serie TV
+
+                            </a>
+
+                        </li>
+
+                        <li class="nav-item ">
+                            <a class="nav-link font-weight-bold" href="#" role="button" data-toggle="dropdown"
+                                aria-expanded="false">
+                                Film
+
+                            </a>
+
+                        </li>
+
+                        <li class="nav-item ">
+                            <a class="nav-link font-weight-bold" href="#" role="button" data-toggle="dropdown"
+                                aria-expanded="false">
+                                Nuovi e popolari
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item ">
+                            <a class="nav-link font-weight-bold" href="#" role="button" data-toggle="dropdown"
+                                aria-expanded="false">
+                                La mia lista
+
+                            </a>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a class="nav-link font-weight-bold" href="#" role="button" data-toggle="dropdown"
+                                aria-expanded="false">
+                                Sfoglia
+
+                            </a>
+                        </li>
+
+                    </ul>
+
+
+
+
+
+                </div>
+            </div>
+
+            <div>
+                <form class="d-flex search-div d-none d-sm-block" id="searchForm">
+                    <i class="bi bi-search" id="searchIcon"></i>
+                    <input class="form-control" type="search" placeholder="Titoli, persone, generi" aria-label="Search"
+                        id="searchInput">
+                </form>
+            </div>
+
+            <div class="update-bell d-none d-sm-block">
+                <i class="bi bi-bell"></i>
+            </div>
+
+            <div class="user-name d-none d-sm-block">
+                Alessio
+            </div>
+
+            </a>
+            <div class="dropdown d-none d-lg-block" onmouseover="toggleDropdown(this)">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="image-container">
+                        <img src="assets\imgs\avatar-1.jpg" alt="">
+                    </div>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton2">
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-person-fill"></i> Gestisci profili</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-arrow-right-square-fill"></i> Trasferisci
+                            profilo</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-gear-fill"></i> Account</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-question-circle-fill"></i> Centro
+                            assistenza</a></li>
+
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-left" style="opacity: 0;"></i> Esci
+                            da Netflix</a></li>
+                </ul>
+
+            </div>
+        </nav>
+        <!-- <nav class="navbar fixed-top navbar-expand-lg">
+
+            <a class="navbar-brand" href="#">
+                <img src="assets\imgs\Netflix_Logo_RGB.png" width="30" height="30" alt="">
+            </a>
+
+
+
+            <div id="mob-div">
+
+                <div class="d-lg-none p-0">
+
+                    <button class="btn btn-default  p-1" type="button" data-toggle="dropdown" aria-expanded="false" style="color: white;">
+                        <div class="image-bell-container">
+                            <img id="bell" src="/assets/notifications-outline.svg" alt="">
+                            <div class="circle-bell"></div>
+                        </div>
+                    </button>
+                </div>
+
+
+                <div class="d-lg-none p-0">
+                    <div class="dropdown">
+                        <button class="btn btn-default p-1" type="button" data-toggle="dropdown" aria-expanded="false" style="color: white;">
+                            <div class="image-container">
+                                <img src="/assets/avatar-1.jpg" alt="">
+                                <div class="circle"></div>
+                            </div>
+                        </button>
+
+                        <div id="drop-div" class="dropdown-menu dropdown-menu-right">
+
+                            <div class=" d-flex pl-3 align-items-center justify-content-start dropdown-item">
+                                <div class="image-container">
+                                    <img id="test" src="/assets/avatar-1.jpg" alt="">
+                                    <div class="circle"></div>
+                                </div>
+                                <div
+                                    class="d-flex flex-column pl-3 align-items-start justify-content-start dropdown-item">
+                                    <a style="font-weight: bold;">Annette Black</a>
+                                    <a>annette@geeksui.com</a>
+                                </div>
+
+                            </div>
+
+                            <div class="dropdown-divider"></div>
+                            <div id="drop-div-3">
+                                <div class=" d-flex pl-3 align-items-center justify-content-start dropdown-item">
+                                    <img src="/assets/person-outline.svg" class="adropdown-item"></a>
+                                    <a class="dropdown-item pl-2 align-items-center justify-content-start dropdown-item"
+                                        href="#">Profile</a>
+                                </div>
+
+                                <div class=" d-flex pl-3 align-items-center justify-content-start dropdown-item">
+                                    <img src="/assets/star-outline.svg" class="adropdown-item"></a>
+                                    <a class="dropdown-item pl-2 align-items-center justify-content-start dropdown-item"
+                                        href="#">Subscription</a>
+                                </div>
+
+                                <div class=" d-flex pl-3 align-items-center justify-content-start dropdown-item">
+                                    <img src="/assets/settings-outline.svg" class="adropdown-item"></a>
+                                    <a class="dropdown-item pl-2 align-items-center justify-content-start dropdown-item"
+                                        href="#">Settings</a>
+                                </div>
+
+
+
+
+
+                                <div class="dropdown-divider"></div>
+
+                                <div class=" d-flex pl-3 align-items-center justify-content-start dropdown-item">
+                                    <img src="/assets/log-out-outline.svg" class="adropdown-item"></a>
+                                    <a class="dropdown-item pl-2 align-items-center justify-content-start dropdown-item"
+                                        href="#">Sign
+                                        Out</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="navbar-toggler " type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+            </div>
+
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+
+                    <li class="nav-item ">
+                        <a class="nav-link font-weight-bold" href="#" role="button" data-toggle="dropdown"
+                            aria-expanded="false">
+                            Home
+                        </a>
+
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link font-weight-bold" href="#" role="button" data-toggle="dropdown"
+                        aria-expanded="false">
+                        Serie TV
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link font-weight-bold" href="#" role="button" data-toggle="dropdown"
+                        aria-expanded="false">
+                        Film
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link font-weight-bold" href="#" role="button" data-toggle="dropdown"
+                        aria-expanded="false">
+                        Nuovi e popolari
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item ">
+                        <a class="nav-link font-weight-bold" href="#" role="button" data-toggle="dropdown"
+                        aria-expanded="false">
+                        La mia lista
+
+                        </a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link font-weight-bold" href="#" role="button" data-toggle="dropdown"
+                        aria-expanded="false">
+                        Sfoglia
+
+                        </a>
+                    </li>
+
+                </ul>
+
+
+            </div>
+            <div class="d-none d-lg-block">
+                <button class="btn btn-default  p-1" type="button" data-toggle="dropdown" aria-expanded="false" style="color: white;">
+                    <div class="image-bell-container">
+                        <img id="bell" src="/assets/notifications-outline.svg" alt="">
+                        <div class="circle-bell"></div>
+                    </div>
+                </button>
+            </div>
+
+
+
+            <div class="dropdown d-none d-lg-block">
+
+
+                <button class="btn btn-default" type="button" data-toggle="dropdown" aria-expanded="false" style="color: white;">
+                    <div class="image-container">
+                        <img src="/assets/avatar-1.jpg" alt="">
+                        <div class="circle"></div>
+                    </div>
+
+                </button>
+                <div class="dropdown-menu dropdown-menu-right">
+
+                    <div class=" d-flex pl-3 align-items-center justify-content-start dropdown-item">
+                        <div class="image-container">
+                            <img src="/assets/avatar-1.jpg" alt="">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="d-flex flex-column pl-3 align-items-start justify-content-start dropdown-item">
+                            <a style="font-weight: bold;">Annette Black</a>
+                            <a>annette@geeksui.com</a>
+                        </div>
+
+                    </div>
+
+                    <div class="dropdown-divider"></div>
+
+                    <div id="drop-div-2">
+
+                        <div class=" d-flex pl-3 align-items-center justify-content-start dropdown-item">
+                            <img src="/assets/person-outline.svg" class="adropdown-item"></a>
+                            <a class="dropdown-item pl-2 align-items-center justify-content-start dropdown-item"
+                                href="#">Profile</a>
+                        </div>
+
+                        <div class=" d-flex pl-3 align-items-center justify-content-start dropdown-item">
+                            <img src="/assets/star-outline.svg" class="adropdown-item"></a>
+                            <a class="dropdown-item pl-2 align-items-center justify-content-start dropdown-item"
+                                href="#">Subscription</a>
+                        </div>
+
+                        <div class=" d-flex pl-3 align-items-center justify-content-start dropdown-item">
+                            <img src="/assets/settings-outline.svg" class="adropdown-item"></a>
+                            <a class="dropdown-item pl-2 align-items-center justify-content-start dropdown-item"
+                                href="#">Settings</a>
+                        </div>
+
+                        <div class="dropdown-divider"></div>
+
+                        <div class=" d-flex pl-3 align-items-center justify-content-start dropdown-item">
+                            <img src="/assets/log-out-outline.svg" class="adropdown-item"></a>
+                            <a class="dropdown-item pl-2 align-items-center justify-content-start dropdown-item"
+                                href="#">Sign Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </nav> -->
+    </section>
+
 
     <section class="first-carousel mt-5">
         <!-- primo carosello - versione desktop -->
@@ -265,13 +639,20 @@
         </div>
 
     </section>
-   
+
+    <!-- DIV DI PROVA -->
+    <div style="height: 800px; width:100%; background-color:aqua">
+
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
 
 
 </body>
